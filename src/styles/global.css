@@ -1,3 +1,6 @@
+/* html {
+  font-size: 62.5%;
+} */
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +14,24 @@ body {
 }
 
 #root {
+  display: flex;
+  align-items: center;
   height: 100%;
   width: 100%;
+  background-color: var(--background-first);
+}
+
+.container {
+  height: 692px;
+  width: 730px;
+  box-shadow: 0px 0px 6px var(--shadow-color);
+  margin-left: 42px;
+  border-radius: 8px;
+  background-color: var(--white);
+}
+
+.text-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-title);
 }

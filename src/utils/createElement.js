@@ -1,3 +1,7 @@
+const setAttribute = ($element, attribute) => {
+  $element.setAttribute(attribute[0], attribute[1]);
+};
+
 export const createElement = (props) => {
   const $element = document.createElement(props.tagName);
 
@@ -7,6 +11,7 @@ export const createElement = (props) => {
     });
 
   if (props.textContent) $element.textContent = props.textContent;
+  if (props.setAttribute) setAttribute($element, props.setAttribute);
 
   return $element;
 };
