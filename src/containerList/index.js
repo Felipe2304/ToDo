@@ -2,6 +2,8 @@ import { createElement } from "../utils/createElement.js";
 import { importCSS } from "../utils/importCSS.js";
 import { setChildren } from "../utils/setChildren.js";
 import { ListTaskItem } from "../components/ListTaskItem/index.js";
+import { ButtonAddList } from "../components/ButtonAddList/index.js";
+import { Modal } from "../components/Modal/index.js";
 importCSS("./src/containerList/containerList.css");
 
 export const containerList = () => {
@@ -33,12 +35,20 @@ export const containerList = () => {
   });
 
   const $listTaskItem = ListTaskItem();
+  const $buttonAddList = ButtonAddList();
+  const $modal = Modal();
+
+  $buttonAddList.addEventListener("click", () => {
+    const $root = document.querySelector("#root");
+    setChildren($root, [$modal]);
+  });
 
   setChildren($headerMenuList, [$headerMenuListTitle]);
   setChildren($headerMenuList, [$headerMenuListIcon]);
   setChildren($containerList, [$headerMenuList]);
   setChildren($listTasks, [$listTaskItem]);
   setChildren($containerList, [$listTasks]);
+  setChildren($containerList, [$buttonAddList]);
 
   return $containerList;
 };
