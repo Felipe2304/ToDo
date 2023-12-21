@@ -1,0 +1,55 @@
+.title-modal-list {
+  margin-bottom: 8px;
+}
+
+.wrapper-input-button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.input-box-icon {
+  display: flex;
+  align-items: center;
+  max-width: 410px;
+  background-color: var(--input-grey);
+  padding: 9px 16px;
+  border-radius: 8px;
+}
+
+.input-box-icon:focus-within {
+  border: 1px solid var(--blue);
+}
+
+.input-box-icon b {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-grey);
+}
+
+.input {
+  border: none;
+  width: 400px;
+  background-color: transparent;
+  outline: none;
+  padding-left: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-grey);
+}
+
+.color-pallet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.ball {
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  background-color: blue;
+  cursor: pointer;
+}

@@ -3,7 +3,7 @@ import { importCSS } from "../utils/importCSS.js";
 import { setChildren } from "../utils/setChildren.js";
 import { ListTaskItem } from "../components/ListTaskItem/index.js";
 import { ButtonAddList } from "../components/ButtonAddList/index.js";
-import { Modal } from "../components/Modal/index.js";
+import { ModalListTitle } from "../components/ModalListTitle/index.js";
 importCSS("./src/containerList/containerList.css");
 
 export const containerList = () => {
@@ -36,11 +36,11 @@ export const containerList = () => {
 
   const $listTaskItem = ListTaskItem();
   const $buttonAddList = ButtonAddList();
-  const $modal = Modal();
+  const $modalLIstTitle = ModalListTitle();
 
   $buttonAddList.addEventListener("click", () => {
     const $root = document.querySelector("#root");
-    setChildren($root, [$modal]);
+    setChildren($root, [$modalLIstTitle]);
   });
 
   setChildren($headerMenuList, [$headerMenuListTitle]);

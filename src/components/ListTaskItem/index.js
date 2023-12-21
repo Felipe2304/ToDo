@@ -18,7 +18,7 @@ export const ListTaskItem = () => {
   const $listTaskItemTitle = createElement({
     tagName: "p",
     className: ["list-task-item-title"],
-    textContent: "mercado",
+    textContent: "All",
   });
 
   setChildren($listTaskItem, [$listTaskItemBall]);

@@ -14,14 +14,16 @@ export const Modal = () => {
     },
   });
 
+  return $containerModal;
+};
+
+export const BoxModal = () => {
   const $boxModal = createElement({
     tagName: "div",
     className: ["box-modal"],
   });
 
-  setChildren($containerModal, [$boxModal]);
-
-  return $containerModal;
+  return $boxModal;
 };
 
 const removeModal = (e) => {
